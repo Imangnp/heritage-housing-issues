@@ -10,7 +10,7 @@ You can safely delete the Gitpod Template Instructions section of this README.md
 
 ## How to use this repo
 
-1. Use this template to create your GitHub project reposi
+1. Use this template to create your GitHub project repo
 
 1. Log into <a href="https://app.codeanywhere.com/" target="_blank" rel="noreferrer">CodeAnywhere</a> with your GitHub account.
 
