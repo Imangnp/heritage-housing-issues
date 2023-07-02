@@ -50,4 +50,4 @@ def page_summary_body():
         f"visualisations of the correlated variables against the sale price "
         f"to show that. \n\n "
         f"**2.** The client is interested in predicting the house sale price "
-        f"from her four inherited houses and any other house in Ames, Iowa. ")
+        f"from her four inherited houses and any other house in Ames, Iowa.")
