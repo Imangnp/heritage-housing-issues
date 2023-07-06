@@ -1,11 +1,9 @@
+from src.data_management import load_house_prices_data
 import numpy as np
 import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set_style("whitegrid")
-
-# load data management function
-from src.data_management import load_house_prices_data
 
 
 def page_sale_price_study_body():
@@ -93,6 +91,7 @@ def sale_price_per_variable(df_eda, relevant_variables):
 
 # function created using "Sale Price Study" notebook - "Analyzing Correlations"
 def plot_numerical(df_eda, col, target_var):
+
     fig = plt.figure(figsize=(8, 5))
     sns.scatterplot(data=df_eda, x=col, y='SalePrice')
     plt.title(f"{col} vs SalePrice", fontsize=20, y=1.05)
@@ -101,9 +100,16 @@ def plot_numerical(df_eda, col, target_var):
     st.pyplot(fig)  # Display the matplotlib plot using Streamlit
 
 
-# function created using "Sale Price Study" notebook - "Data Visualization"
 def plot_heatmap(df_eda, relevant_variables):
+
+    # Create a new DataFrame with the selected variables
+    heatmap_vars = df_eda.copy()
+
+    # Calculate the correlation matrix
+    correlation_matrix = heatmap_vars.corr()
+
+    # Plot the heat map
     fig = plt.figure(figsize=(10, 8))
-    sns.heatmap(data=df_eda, annot=True, cmap='coolwarm', square=True)
+    sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', square=True)
     plt.title("Correlation Matrix", fontsize=20)
     st.pyplot(fig)
