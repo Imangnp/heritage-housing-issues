@@ -11,7 +11,7 @@ You can find the live link here: [Heritage Housing Issues](https://)
 # Table of contents
 
 - [Dataset Content](#dataset-content)
-- [Project Terms & Jargons](#project-terms-&-jargons)
+- [Project Terms and Jargons](#project-terms-and-jargons)
 - [Business Requirements](#business-requirements)
 - [Project hypothesis and validation](#project-hypothesis-and-validation)
 - [User Stories](#user-stories)
@@ -57,7 +57,7 @@ You can find the live link here: [Heritage Housing Issues](https://)
 |SalePrice|Sale Price|34900 - 755000|
 
 
-# Project Terms & Jargons
+# Project Terms and Jargons
   - **Variables**: Refers to the different attributes of a house, such as floor area, basement and garage.
   - **Target Variable**: The target variable in this study is the 'SalePrice'. It represents the price at which a house was sold.
 
@@ -71,12 +71,33 @@ Although your friend has an excellent understanding of property prices in her ow
 * 2 - The client is interested in predicting the house sale price from her four inherited houses and any other house in Ames, Iowa.
 
 
-## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them).
+# Project hypothesis and validation
+**Hypothesis 1**: The quality of the house has a significant impact on its sale price.
+- Both Pearson (0.791) and Spearman (0.810) correlation methods reveal a substantial positive correlation between the overall quality of the house (OverallQual) and its sale price. This suggests that houses with higher quality ratings tend to command higher prices.
+
+**Hypothesis 2**: The year of construction affects the sale price of a property.
+- The year of construction (YearBuilt) shows a moderate positive correlation with the sale price. Pearson correlation coefficient (0.523) suggests that more recently built houses tend to have higher prices.
+
+**Hypothesis 3**: The size of the house influences its sale price.
+- Variables such as ground living area (GrLivArea), garage area (GarageArea), total basement square footage (TotalBsmtSF), and first floor square footage (1stFlrSF) exhibit strong positive correlations with the sale price. The Pearson correlation coefficients for these variables range from 0.605 to 0.709, indicating that larger houses tend to have higher sale prices.
 
 
-## The rationale to map the business requirements to the Data Visualisations and ML tasks
-* List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.
+# Rationale to map the business requirements to the Data Visualizations and ML tasks
+* ### Business Requirement 1: Correlation Study and Data Visualization
+  The client's objective is to gain insights into the factors influencing the sale price of houses.
+  - Review and Inspect Dataset: In order to gain a comprehensive understanding of the dataset related to the houses, a thorough review and inspection of the data will be conducted.
+  - Correlation Study: To understand how different variables relate to the "SalePrice" of houses, both Pearson and Spearman correlation coefficients will be calculated.
+  - Select Most Correlated Variables: Based on the correlation study results, the most highly correlated variables with the "SalePrice" will be identified. These variables will be given priority for further analysis.
+  - Data Visualization: Visualizations such as scatter plots, heatmaps, and pair plots will be used to to represent the correlations between each variable and the "SalePrice."
+  - Hypothesis Validation: Findings from the correlation study and data visualizations will be used to validate hypotheses about the factors influencing house prices.
+
+* ### Business Requirement 2: Predict House Prices
+  The client's objective is to accurately predict house prices in Ames, Iowa. 
+  - Data Cleaning and Feature Engineering: To prepare the data for the machine learning model, it is important to clean the data and perform feature engineering.
+  - Regression Model Development: A regression model will be constructed using appropriate algorithms (random forest regression) to predict the sale price of houses.
+  - Hyperparameter Tuning: To optimize the performance of the regression model, hyperparameters will be adjusted.
+  - Regression Evaluation: The trained model will be evaluated using appropriate evaluation metrics such as R2 score (coefficient of determination) and Mean Absolute Error (MAE).
+  - Predict house prices: Once the model is trained and evaluated, it can be utilized to predict the prices of four inherited houses and any other house in Ames, Iowa.
 
 
 ## ML Business Case
@@ -131,5 +152,6 @@ Although your friend has an excellent understanding of property prices in her ow
 ## Acknowledgements (optional)
 * In case you would like to thank the people that provided support through this project.
 
+---
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
