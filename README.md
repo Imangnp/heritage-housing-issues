@@ -1,55 +1,31 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Heritage Housing Issues
 
-## Codeanywhere Template Instructions
+The Heritage Housing Issue project is a machine learning application designed to analyze historical data and relevant features to visualize and predict house prices in Ames, Iowa. The project follows a structured workflow, including data collection, data preparation, model training, and evaluation.
 
-Welcome,
+You can find the live link here: [Heritage Housing Issues](https://)
 
-This is the Code Institute student template for Codeanywhere. We have preinstalled all of the tools you need to get started. It's ok to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
+![Responsive](media/responsive.png)
 
-You can safely delete the Gitpod Template Instructions section of this README.md file,  and modify the remaining paragraphs for your own project. Please do read the Gitpod Template Instructions at least once, though! It contains some important information about "Gitpod" and the extensions we use. 
+---
 
-## How to use this repo
+# Table of contents
 
-1. Use this template to create your GitHub project repo
+- [Dataset Content](#dataset-content)
+- [Project Terms & Jargons](#project-terms-&-jargons)
+- [Business Requirements](#business-requirements)
+- [Project hypothesis and validation](#project-hypothesis-and-validation)
+- [User Stories](#user-stories)
+- [Rationale to map the business requirements to the Data Visualizations and ML tasks](#rationale-to-map-the-business-requirements-to-the-data-visualizations-and-ml-tasks)
+- [ML Business Case](#ml-business-case)
+- [Dashboard Design](#dashboard-design)
+- [Unfixed Bugs](#unfixed-bugs)
+- [Deployment to Heroku](#deployment-to-heroku)
+- [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
+- [Credits](#credits)
 
-1. Log into <a href="https://app.codeanywhere.com/" target="_blank" rel="noreferrer">CodeAnywhere</a> with your GitHub account.
+---
 
-1. On your Dashboard, click on the New Workspace button
-
-1. Paste in the URL you copied from GitHub earlier
-
-1. Click Create
-
-1. Wait for the workspace to open. This can take a few minutes.
-
-1. Open a new terminal and <code>pip3 install -r requirements.txt</code>
-
-1. In the terminal type <code>pip3 install jupyter</code>
-
-1. In the terminal type <code>jupyter notebook --NotebookApp.token='' --NotebookApp.password=''</code> to start the jupyter server.
-
-1. Open port 8888 preview or browser
-
-1. Open the jupyter_notebooks directory in the jupyter webpage that has opened and click on the notebook you want to open.
-
-1. Click the button Not Trusted and choose Trust.
-
-Note that the kernel says Python 3. It inherits from the workspace so it will be Python-3.8.12 as installed by our template. To confirm this you can use <code>! python --version</code> in a notebook code cell.
-
-
-## Cloud IDE Reminders
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-## Dataset Content
+# Dataset Content
 * The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/housing-prices-data). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace. 
 * The dataset has almost 1.5 thousand rows and represents housing records from Ames, Iowa, indicating house profile (Floor Area, Basement, Garage, Kitchen, Lot, Porch, Wood Deck, Year Built) and its respective sale price for houses built between 1872 and 2010.
 
@@ -81,10 +57,12 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 |SalePrice|Sale Price|34900 - 755000|
 
 
+# Project Terms & Jargons
+  - **Variables**: Refers to the different attributes of a house, such as floor area, basement and garage.
+  - **Target Variable**: The target variable in this study is the 'SalePrice'. It represents the price at which a house was sold.
 
 
-
-## Business Requirements
+# Business Requirements
 As a good friend, you are requested by your friend, who has received an inheritance from a deceased great-grandfather located in Ames, Iowa, to  help in maximising the sales price for the inherited properties.
 
 Although your friend has an excellent understanding of property prices in her own state and residential area, she fears that basing her estimates for property worth on her current knowledge might lead to inaccurate appraisals. What makes a house desirable and valuable where she comes from might not be the same in Ames, Iowa. She found a public dataset with house prices for Ames, Iowa, and will provide you with that.
@@ -153,3 +131,5 @@ Although your friend has an excellent understanding of property prices in her ow
 ## Acknowledgements (optional)
 * In case you would like to thank the people that provided support through this project.
 
+
+![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
