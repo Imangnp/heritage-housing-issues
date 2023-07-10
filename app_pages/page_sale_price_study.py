@@ -73,12 +73,30 @@ def page_sale_price_study_body():
         sale_price_per_variable(df_eda, relevant_variables)
 
     st.write(
-        f"* Heatmap showing the correlation between the relevant variables:"
+        f"* Heatmap showing the correlation between the relevant variables: "
     )
 
     # Plotting Heatmap
     if st.checkbox("Show Correlation Heatmap"):
         plot_heatmap(df_eda, relevant_variables)
+
+    st.write(
+        f"**Finding:**\n\n"
+        f"Based on correlation and plot analysis, the following observations"
+        f" have been made to address the first business question regarding the"
+        f"  correlation between house attributes and the typical Sale Price:\n"
+        f"* The *Sale Price* of a house tends to be higher for properties"
+        f" with certain attributes. \n"
+        f"* *Overall Quality* of the house has the strongest "
+        f"correlation with Sale Price, indicating that houses with higher "
+        f"quality generally command higher prices. \n"
+        f"* Variables such as *Above Ground Living Area*, *Garage Area*, "
+        f"*Total Basement Square Footage*, and *First Floor Square "
+        f"Footage* also show strong positive correlations with"
+        f" *Sale Price.* \n"
+        f"* Other variables, such as *Year Built*, exhibit moderate "
+        f"positive correlations with *Sale Price*."
+    )
 
 
 # Iterate over each relevant variable and plot its relationship with SalePrice
