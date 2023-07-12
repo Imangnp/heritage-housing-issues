@@ -82,6 +82,49 @@ Although your friend has an excellent understanding of property prices in her ow
 - Variables such as ground living area (GrLivArea), garage area (GarageArea), total basement square footage (TotalBsmtSF), and first floor square footage (1stFlrSF) exhibit strong positive correlations with the sale price. The Pearson correlation coefficients for these variables range from 0.605 to 0.709, indicating that larger houses tend to have higher sale prices.
 
 
+# User Stories
+**Information Gathering and Data Collection**:
+- As a Data Practitioner, I want to collect the public dataset on house prices in Ames, Iowa, so that I can gather the necessary data for analysis.
+    * How: This will be done by obtaining the data from Kaggle using an API key.
+
+- As a Data Practitioner, I want to gather information on the client's four inherited houses, so that I can include them in the analysis.
+    * How: Collect relevant details and attributes of the client's four inherited houses, including features.
+
+
+**Data Visualization, Cleaning, and Preparation**:
+- As a Data Practitioner, I want to visualize the correlated variables against the sale price to identify relationships and potential insights.
+    * How: Create visualizations, such as scatter plots or heatmaps, to showcase the correlation between each variable and the sale price.
+
+- As a Data Practitioner, I want to clean and preprocess the data to ensure its quality and suitability for analysis.
+    * How: Apply data cleaning techniques to handle missing values, outliers, and inconsistencies in the dataset, ensuring the data is accurate and ready for further analysis.
+
+- As a Data Practitioner, I want to identify the most correlated variables with the sale price so that I can focus on the key factors influencing house prices.
+    * How: Calculate and analyze the correlation coefficients between each variable and the sale price, identifying the variables with the highest correlation values.
+
+**Model Training, Optimization, and Validation**:
+- As a Data Practitioner, I want to train, optimize, and validate a regression model using the collected data to predict house sale prices accurately.
+    * How: Use the cleaned and preprocessed data to train a regression model, optimize its hyperparameters, and evaluate its performance using appropriate metrics.
+
+
+**Dashboard Planning, Designing, and Development**:
+- As a user, I want to have access to an intuitive and user-friendly dashboard, so that I can easily explore the data, visualize predictions, and gain insights.
+    * How: The dashboard will be designed with a clean and organized layout, intuitive navigation, and user-friendly interactions.
+
+- As a user, I want the dashboard to incorporate interactive visualizations and predictive capabilities, allowing me to interact with the data and receive accurate predictions.
+    * How: The dashboard will be developed using appropriate technologies for interactive visualizations and seamless interaction with the data.
+
+
+**Dashboard Deployment and Release**:
+- As a user, I expect the dashboard to be deployed to a production environment, making it easily accessible for me and other users.
+    * How: The dashboard will be deployed to a web server or hosting platform such as Heroku for convenient access through a web browser.
+
+- As a user, I want the dashboard to undergo thorough testing and quality assurance to ensure its functionality and performance.
+    * How: The dashboard will be rigorously tested for functionality, responsiveness, and compatibility across different devices and browsers.
+    
+- As a Data Practitioner, I want to release the dashboard to the client and provide necessary documentation for its usage and maintenance.
+    * How: Provide the client with the deployed dashboard, along with clear documentation outlining its usage instructions, features, and any necessary maintenance tasks.
+
+
 # Rationale to map the business requirements to the Data Visualizations and ML tasks
 * ### Business Requirement 1: Correlation Study and Data Visualization
   The client's objective is to gain insights into the factors influencing the sale price of houses.
@@ -101,7 +144,44 @@ Although your friend has an excellent understanding of property prices in her ow
 
 
 ## ML Business Case
-* In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
+- Business Requirements:
+  * Visualizations: Provide data visualizations showcasing the correlation between house attributes and sale prices.
+  * Sale Price Prediction: Enable the prediction of sale prices for the client's inherited houses and any other house in Ames, Iowa.
+
+- Conventional Data Analysis:
+  * Conventional data analysis will be utilized to investigate the correlation between house attributes and sale prices.
+
+- Dashboard Requirement:
+  * The client requires a dashboard to present the project outcomes.
+
+- Project Outcome:
+
+  The client considers the project successful if it achieves the following outcomes:
+    * Relevant Variables: Identify and present the most relevant variables correlated with the sale price.
+    * Sale Price Prediction: Develop a model capable of predicting the sale price for the client's four inherited houses and other properties in Ames, Iowa.
+
+- Epics and User Stories:
+  * Information Gathering and Data Collection
+  * Data Visualization, Cleaning, and Preparation
+  * Model Training, Optimization, and Validation
+  * Dashboard Planning, Designing, and Development
+  * Dashboard Deployment and Release
+
+- Ethical or Privacy Concerns:
+  * No ethical or privacy concerns have been identified since the client has obtained the dataset from a public source.
+
+- Model Selection:
+  * Based on the available data, a regressor model will be employed to predict the sale price. The regressor will take house attribute information as inputs and generate the predicted sale price as the output.
+
+- Performance Goal:
+
+  To meet the client's expectations, the following performance goal has been set:
+    * Achieve an R2 score of at least 0.75 on both the train and test sets.
+
+- Client Benefits:
+
+  The House Price Prediction Dashboard will provide the client with the following benefits:
+    * Maximizing Sales Price: By understanding the most relevant variables correlated with sale price, the client can make informed decisions to maximize the sale prices of the inherited properties.
 
 
 ## Dashboard Design
@@ -135,23 +215,3 @@ Although your friend has an excellent understanding of property prices in her ow
 
 * In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
 * You can break the credits section up into Content and Media, depending on what you have included in your project. 
-
-### Content 
-
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-
-### Media
-
-- The photos used on the home and sign-up page are from This Open Source site
-- The images used for the gallery page were taken from this other open-source site
-
-
-
-## Acknowledgements (optional)
-* In case you would like to thank the people that provided support through this project.
-
----
-
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
