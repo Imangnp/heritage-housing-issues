@@ -143,7 +143,7 @@ Although your friend has an excellent understanding of property prices in her ow
   - Predict house prices: Once the model is trained and evaluated, it can be utilized to predict the prices of four inherited houses and any other house in Ames, Iowa.
 
 
-## ML Business Case
+# ML Business Case
 - Business Requirements:
   * Visualizations: Provide data visualizations showcasing the correlation between house attributes and sale prices.
   * Sale Price Prediction: Enable the prediction of sale prices for the client's inherited houses and any other house in Ames, Iowa.
@@ -184,10 +184,96 @@ Although your friend has an excellent understanding of property prices in her ow
     * Maximizing Sales Price: By understanding the most relevant variables correlated with sale price, the client can make informed decisions to maximize the sale prices of the inherited properties.
 
 
-## Dashboard Design
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items that your dashboard library supports.
-* Eventually, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
+# Dashboard Design
 
+### Page 1: Project Summary
+
+This page is divided into four sections to provide a comprehensive overview of the project.
+
+* Overview and Objectives
+    Provides a overview of the ML application and its functionalities.
+
+* Project Terms & Dataset
+    Clarifies any specialized terminology or jargon used throughout the project.
+
+* Project Dataset
+    Presents a overview of the project dataset, which has been sourced from Kaggle.
+
+* Business Requirements
+
+![Project Summary](media/page_summary.png)
+
+
+### Page 2: House Sale Prices Study
+
+This page answers the first business requirement and conducts data analysis on the sale price:
+
+* Dataset Preview
+    Clicking on the checkbox will open the table overview of the dataset, displaying its contents.
+
+* Most Correlated Variables
+    Identifies the variables that have the highest correlation with the target variable 'SalePrice'.
+
+* Variable Meanings
+    Offers descriptions of the meaning and significance of each variable in the dataset.
+
+* General Conclusion
+    Summarizes the overall findings and conclusions from the study on house sale prices.
+
+![Sale Prices Study](media/page_sale_price_study.png)
+
+* Interactive Boxes
+    Presents interactive scatter plots and heatmaps that users can explore by selecting checkboxes, revealing additional data and insights.
+
+![Scatter Plots](media/scatterplots.png)
+![Heatmap Plots](media/heatmap.png)
+
+
+### Page 3: Predict House Sale Price
+
+This page answers the second business requirement and how the analysis meets it. It includes the following elements:
+
+* A table that presents the features of four inherited houses.
+
+* Another table showcasing the best features used for predicting the sale prices, along with the sum of the predicted sale prices for the four inherited houses.
+
+* A intuitive tool with input widgets to predict the sale price of any house in Ames, Iowa, based on the information provided by the user.
+
+![Predict House Sale Price](media/page_predict_price.png)
+
+
+### Page 4: Project Hypothesis
+
+This page explores three hypotheses that are directly linked to the objectives of the study.
+
+The process of validation is explained, providing detailed insights into the testing and confirmation of each hypothesis through analysis.
+
+Finally, the page presents the key findings derived from the examination of factors influencing house prices.
+
+![Project Hypothesis](media/page_project_hypothesis.png)
+
+
+### Page 5: ML Predict Sale Price
+
+This page focuses on the performance of the ML model for predicting house sale prices.
+
+* General Conclusion
+    Provides a brief summary of the overall performance of the ML model and highlights the main insights derived from the steps described below.
+
+* ML Pipeline
+    The steps taken to predict house sale prices using the ML model. This provides insights into the various stages of the pipeline, outlining the processes and techniques employed.
+
+* Feature Importance
+    The graphical representation that demonstrates the importance of various features used in training the ML model.
+
+* Pipeline Performance
+    Various performance statistics of the ML pipeline which evaluate the accuracy and reliability of the model's predictions.
+
+* Regression Evaluation Plots
+    To provide a visual assessment of the ML model's performance, this section presents a plot comparing the predicted sale prices with the actual sale prices.
+
+![ML Predict Sale Price](media/ml_predict_sale_price.png)
+![ML Regression](media/ml-regression-evaluation.png)
 
 
 ## Unfixed Bugs
