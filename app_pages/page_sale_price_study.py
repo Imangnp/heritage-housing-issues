@@ -80,7 +80,7 @@ def page_sale_price_study_body():
     if st.checkbox("Show Correlation Heatmap"):
         plot_heatmap(df_eda, relevant_variables)
 
-    st.write(
+    st.success(
         f"**Finding:**\n\n"
         f"Based on correlation and plot analysis, the following observations"
         f" have been made to address the first business question regarding the"
