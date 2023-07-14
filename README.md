@@ -1,8 +1,9 @@
+
 # Heritage Housing Issues
 
 The Heritage Housing Issue project is a machine learning application designed to analyze historical data and relevant features to visualize and predict house prices in Ames, Iowa. The project follows a structured workflow, including data collection, data preparation, model training, and evaluation.
 
-You can find the live link here: [Heritage Housing Issues](https://)
+You can find the live link here: [Heritage Housing Issues](https://heritagehousingissues-ed94e76b3412.herokuapp.com/)
 
 ![Responsive](media/responsive.png)
 
@@ -18,8 +19,8 @@ You can find the live link here: [Heritage Housing Issues](https://)
 - [Rationale to map the business requirements to the Data Visualizations and ML tasks](#rationale-to-map-the-business-requirements-to-the-data-visualizations-and-ml-tasks)
 - [ML Business Case](#ml-business-case)
 - [Dashboard Design](#dashboard-design)
-- [Unfixed Bugs](#unfixed-bugs)
-- [Deployment to Heroku](#deployment-to-heroku)
+- [Bugs](#bugs)
+- [Deployment](#deployment)
 - [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
 - [Credits](#credits)
 
@@ -276,28 +277,62 @@ This page focuses on the performance of the ML model for predicting house sale p
 ![ML Regression](media/ml-regression-evaluation.png)
 
 
-## Unfixed Bugs
-* You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not valid reason to leave bugs unfixed.
+# Bugs
 
-## Deployment
+### ValueError: Data must be 1-dimensional
+Description:
+* I encountered an issue when attempting to display Regression Evaluation plot in my dashboard. The error message "ValueError: Data must be 1-dimensional" was raised, indicating that there was a problem with the format or shape of the input data.
+
+![bug](media/bug.png)
+
+Solution:
+* To resolve this issue, with the help of [stackoverflow](https://stackoverflow.com/questions/67708204/valueerror-data-must-be-1-dimensional) and [javatpoint](https://www.javatpoint.com/flatten-vs-ravel-numpy-functions), I made the following changes to my code:
+* I ensured that the `y_train` and `y_test` variables passed to the plotting function were 1-dimensional arrays.
+* By applying `.values.ravel()` method on `y_train` and `y_test` to flatten them into a 1-dimensional format before passing them to the function.
+
+![bug-solution](media/bug-solution.png)
+
+
+# Deployment
 ### Heroku
 
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
-* Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
+* The App live link is: [Heritage Housing Issues](https://heritagehousingissues-ed94e76b3412.herokuapp.com/)
 * The project was deployed to Heroku using the following steps.
 
 1. Log in to Heroku and create an App
 2. At the Deploy tab, select GitHub as the deployment method.
 3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file.
+4. Select the branch (e.g., main) you want to deploy and click Deploy Branch.
+5. Ensure the version of python you are running in runtime.txt is compatible with your app's Heroku stack.
+    * Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
+6. If you need to set the Heroku stack for your app, you can do so by running the following commands in the command line:
+    1. Install Heroku by running `pip install heroku`
+    2. Login by running `heroku login -i` and entering your login details
+    3. Set stack `heroku stack:set <HEROKU-STACK> -a <APP-NAME>`
+7. The deployment process should happen smoothly if all deployment files are fully functional.
+8. Click the button Open App on the top of the page to access your App.
 
-## Main Data Analysis and Machine Learning Libraries
-* Here you should list the libraries you used in the project and provide example(s) of how you used these libraries.
+
+# Main Data Analysis and Machine Learning Libraries
+
+* Numpy - Used for correlation studies to create and manipulate large arrays for tasks such as generating heatmaps.
+* Pandas - Used to convert raw data into data frames, perform operations on datasets, and support data exploration, visualization, and manipulation.
+* pandas_profiling - Generated detailed profile reports featuring missing data analysis, distribution analysis, and diverse data visualizations.
+* seaborn - Used  to generate various charts, such as correlation histograms, heatmap and feature importance.
+* matplotlib - Used to generate various charts and plots to visualize data and present insights.
+* Feature-engine - Performed data engineering tasks like encoding categories and numerical transformation for machine learning feature engineering.
+* Scikit-Learn - Provided tools to create pipelines and feature selection. It was used to import ML algorithms, assess their performance, and optimize hyperparameters.
+* Streamlit - Used to create interactive web app dashboard.
 
 
-## Credits 
+# Credits 
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
+* Code Institute provided the repository [template](https://github.com/Code-Institute-Solutions/milestone-project-heritage-housing-issues).
+* The project's dataset is obtained from [Kaggle](https://www.kaggle.com/codeinstitute/housing-prices-data).
+* Several custom functions and sections of code have been adapted from the Code Institute's learning materials, specifically the Churnometer walkthrough project.
+* This [Tutorial Video](https://www.youtube.com/watch?v=Wqmtf9SA_kk&ab_channel=NeuralNine), along with other videos from the same channel, provided valuable insights and guidance for various aspects of this project.
+
+---
+
+
+[Back to Top](#)

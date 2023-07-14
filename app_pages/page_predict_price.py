@@ -56,7 +56,7 @@ def page_predict_price_body():
 
     # To predict the price of any other house located in Ames, Iowa
     st.write(
-        f"### predict price of any other house in Ames, Iowa"
+        f"### Predict price of any other house in Ames, Iowa"
     )
 
     st.info(

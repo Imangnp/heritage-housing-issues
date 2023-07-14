@@ -57,7 +57,7 @@ def page_ml_predict_body():
     st.write("---")
 
     # evaluate performance on train and test set
-    st.write("## Pipeline Performance")
+    st.write("### Pipeline Performance")
     regression_performance(X_train=X_train, y_train=y_train,
                            X_test=X_test, y_test=y_test,
                            pipeline=best_regressor_pipeline)
